@@ -1,0 +1,40 @@
+// keszito() feladat
+function keszito(){
+document.write("P.Rebeka" + "<br>");
+document.write("Junior Frontend"  + "<br>");
+document.write("TEAM11");
+}
+keszito();
+
+// hatvanyozo feladat
+function hatvanyozo(szam,hatvany){
+return Math.pow(szam,hatvany);
+}
+document.write(hatvanyozo(2,3));
+
+// parosLetrehoz feladat
+function parosLetrehoz(min,max){
+min = Math.ceil(min);
+max = Math.floor(max);
+let random = Math.floor(Math.random()*(max-min + 1)) + min;
+for(i=min; i<max; i++){
+if(random%2==0){
+	return random;
+}
+else{
+	i++;
+}
+}
+}
+document.write(parosLetrehoz(1,100));
+
+// egeszOszto feladat
+function egeszOszto(szam,oszto){
+if(szam%oszto==0){
+	return true;
+}
+else{
+	return false;
+}
+}
+document.write(egeszOszto(2048,3));
