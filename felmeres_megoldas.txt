@@ -1,0 +1,110 @@
+<script>
+//Perle Rebeka Kitti
+//TEAM 11 Junior Frontend
+
+//Első feladat
+
+/*function hosszEllenor(szoHossz){
+	if(szoHossz.length <= 8){
+    	return false;
+    }
+    else{
+    	return true;
+    }
+}
+document.write(hosszEllenor("feladatteszt"));
+*/
+//Második feladat
+
+/*function tajSzamEllenor(szamSorozat){
+if(szamSorozat.length == 9){
+	let paros = 0;
+	for(let i=0; i<szamSorozat.length; i+=2){
+    	paros = 7*(paros + szamSorozat[i]);
+        return paros;
+    }
+    let paratlan = 0;
+    for(let i=1; i<szamSorozat.length; i+=2){
+    	paros = 3*(paratlan + szamSorozat[i]);
+        return paratlan;
+    }
+    if(paros%10==szamSorozat[8] && paratlan%10==szamSorozat[8]){
+    return true;
+    }
+    else{
+    return false;
+    }
+}
+}
+document.write(tajSzamEllenor(123456789));
+*/
+
+//Harmadik feladat
+/*
+function tombTerjedelem(vizsgaltTomb){
+	let tombMinimumErtek = Math.min(...vizsgaltTomb);
+	let tombMaximumErtek = Math.max(...vizsgaltTomb);
+	let tombTerjedelemErteke = tombMaximumErtek - tombMinimumErtek;
+	document.write("A tömb terjedelme: " + tombTerjedelemErteke);
+
+}
+let vizsgaltTomb = [3,5,10,16,9];
+tombTerjedelem(vizsgaltTomb);
+*/
+
+//Negyedik feladat
+
+const Dolgozok = [{
+        nev: "Koaxk Ábel",
+        kor: 23,
+        fizetes: 400000,
+        beosztas: "Rendszergazda"
+    },
+    {
+        nev: "Zsíros B. Ödön",
+        kor: 45,
+        fizetes: 1200000,
+        beosztas: "Ügyvezető Igazgató"
+    },
+    {
+        nev: "Meg Győző",
+        kor: 32,
+        fizetes: 600000,
+        beosztas: "Marketing Manager"
+    },
+    {
+        nev: "Békés Csaba",
+        kor: 63,
+        fizetes: 180000,
+        beosztas: "Takarító"
+    },
+    {
+        nev: "Pofá Zoltán",
+        kor: 25,
+        fizetes: 300000,
+        beosztas: "Biztonsági Őr"
+    },
+    {
+        nev: "Fejet Lenke",
+        kor: 22,
+        fizetes: 220000,
+        beosztas: "Irodai Titkár"
+    },
+    {
+        nev: "Vak Cina",
+        kor: 30,
+        fizetes: 500000,
+        beosztas: "Üzem Orvos"
+    }
+]
+function legidosebbDolgozo(Dolgozok){
+let boomerDolgozo = Math.max(...Dolgozok.map(Dolgozok => Dolgozok.kor));
+var maxValues = Dolgozok.filter(Dolgozok => Dolgozok.age == boomerDolgozo);
+document.write(maxValues);
+}
+legidosebbDolgozo(Dolgozok);
+
+
+
+</script>
+
