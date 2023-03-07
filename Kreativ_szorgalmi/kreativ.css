@@ -1,0 +1,25 @@
+*, body, html{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: lightblue;
+    max-height: 100%;
+    max-width: 100%;
+}
+.container{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.cards{
+    background-color: white;
+    width: 200px;
+    height: 300px;
+    margin: 0px 20px 20px 20px;
+    border: 10px solid whitesmoke;
+    border-radius: 10px;
+}

@@ -1,0 +1,23 @@
+body{
+    padding: 0px;
+    margin: 100px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: aqua;
+}
+.rectangle{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    display: block;
+    position: relative;
+    left: 50%;
+    
+}
+button{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    color: white;
+}
+

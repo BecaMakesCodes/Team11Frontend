@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <button type="button" class="btn">Click Me!</button>
+    </div>
+
+    <script>
+
+        let btnButton = document.querySelector('.btn');
+        let bodyColor = document.getElementsByTagName('body');
+
+        function ButtonClick() {
+            const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+            document.body.style.backgroundColor = "#" + randomColor;
+            color.innerHTML = "#" + randomColor;
+            //Azért 16777215-el szorozza meg, mert annyi a max karakterszáma a hexnek.
+            //A toString(16) hexadecimális értékké alakítja a számot
+        }
+        btnButton.addEventListener('click', ButtonClick);
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        img{
+            display: flex;
+            width: 200px;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    
+    <input id="fok" type="range" value="0" min="-200" max="200">
+    <p id="rangeErtek"></p>
+    <img src="water.jpg" alt="">
+ <!-- Attól függően milyen értéke van az adott range mezőnek, változzon meg a víz halmazállapotának képe-->   
+
+ <script>
+
+    fok.addEventListener("change", HalmazAllapot)
+
+   function HalmazAllapot(){
+    let homerseklet = document.querySelector("#fok").value;
+    document.querySelector("#rangeErtek").innerText = homerseklet;
+    let kep = document.querySelector("img")
+    if(homerseklet<0){
+        kep.src="ice.jpg";
+    }
+    else if(homerseklet>0){
+        kep.src="steam.jpg";
+    }
+    else{
+        kep.src="water.jpg";
+    }
+   }
+    
+
+ </script>
+</body>
+</html>
