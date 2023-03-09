@@ -13,34 +13,45 @@
 
 <body>
     <div class="container">
-        <button class="btn-start" type="button">Start</button>
-        <button class="btn-reset" type="button">Reset</button>
+        <button class="btn-start" id="start" type="button">Start</button>
+        <button class="btn-reset" id="reset" type="button">Reset</button>
         <div class="row">
             <div class="col">
-                <div class="cards" id="card1"><img class="images" id="img1" src="elephant.png" alt=""></div>
+                <div onclick="RevealCardOne()" class="cards" id="card1">
+                    <img class="images" id="img1" src="elephant.png" alt="">
+                </div>
             </div>
             <div class="col">
-                <div class="cards" id="card2"><img class="images" id="img2" src="octopus.png" alt=""></div>
+                <div onclick="RevealCardTwo()" class="cards" id="card2">
+                    <img class="images" id="img2" src="octopus.png" alt="">
+                </div>
             </div>
             <div class="col">
-                <div class="cards" id="card3"><img class="images" id="img3" src="melon.png" alt=""></div>
+                <div onclick="RevealCardThree()" class="cards" id="card3">
+                    <img class="images" id="img3" src="melon.png" alt="">
+                </div>
             </div>
         </div>
-
         <div class="row">
             <div class="col">
-                <div class="cards" id="card4"><img class="images" id="img4" src="elephant.png" alt=""></div>
+                <div onclick="RevealCardFour()" class="cards" id="card4">
+                    <img class="images" id="img4" src="elephant.png" alt="">
+                </div>
             </div>
             <div class="col">
-                <div class="cards" id="card5"><img class="images" id="img5" src="octopus.png" alt=""></div>
+                <div onclick="RevealCardFive()" class="cards" id="card5">
+                    <img class="images" id="img5" src="octopus.png" alt="">
+                </div>
             </div>
             <div class="col">
-                <div class="cards" id="card6"><img class="images" id="img6" src="melon.png" alt=""></div>
+                <div onclick="RevealCardSix()" class="cards" id="card6">
+                    <img class="images" id="img6" src="melon.png" alt="">
+                </div>
             </div>
         </div>
     </div>
 
-    <script src="kreativ.js"></script>
+    <script type="text/javascript" src="kreativ.js"></script>
 </body>
 
 </html>
