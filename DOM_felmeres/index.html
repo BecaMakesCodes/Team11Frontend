@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom felmérés</title>
+    <style>
+        #negyzet{
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!--1.feladat-->
+    <input type="text" id="karakterszam">
+    <span id="showText">Karakterszám</span>
+    <hr>
+
+    <!--2.feladat-->
+    <input type="number" id="X" value="100">
+    <input type="number" id="Y" value="100">
+    <button type="button" id="draw" >Kirajzol</button>
+    <div id="negyzet"></div>
+    <hr>
+
+
+</body>
+<script>
+    //1. feladat
+    function ShowCharLength(){
+        let word = document.getElementById("karakterszam");
+        let textShow = document.getElementById("showText").innerHTML;
+        let length = (word.value).length;
+        console.log(length);
+        document.getElementById("showText").innerHTML = length;
+    }
+    karakterszam.addEventListener("keydown", ShowCharLength);
+
+    //2.feladat
+    function DrawRectangleOnClick(){
+        let xSide = document.getElementById("X").value;
+        console.log(xSide);
+        let ySide = document.getElementById("Y").value;
+        console.log(ySide);
+        let drawButton = document.getElementById("draw");
+        let rectangle = document.getElementById("negyzet");
+
+    
+        if(rectangle.style.display = 'none'){
+            rectangle.style.display = 'block';
+            document.getElementById("negyzet").style.width = xSide + "px";
+            document.getElementById("negyzet").style.height = ySide + "px";
+            
+        }
+        
+        
+
+    }
+    draw.addEventListener("click", DrawRectangleOnClick);
+</script>
+</html>
