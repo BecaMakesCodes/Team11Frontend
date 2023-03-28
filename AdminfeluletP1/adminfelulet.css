@@ -1,0 +1,30 @@
+*,::after,html,::before{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    border-radius: 20px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    padding: 20px;
+}
+button{
+    box-shadow: 5px 5px black;
+}
+#tesco{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 80px;
+    height: 38px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: lightgray;
+    
+}
