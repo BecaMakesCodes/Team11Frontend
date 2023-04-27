@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "The_Odin_Project",
+			"path": "../../The_Odin_Project"
+		},
+		{
+			"name": "Ruander_FrontEnd",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Ruander_FrontEnd"
+	}
+}
