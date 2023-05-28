@@ -1,37 +1,13 @@
-// 1.feladat
-
 function EkezetesBetukSzama(modositandoSzoveg:string):number{
-    let num:number = 0;
-    let array:string[] = ["á","é","í","ő","ú","ű","ö","ó"];
+let ekezetesBetuk:string[] = ["á","é","í","ö","ü","ó","ő","ú","ű"]
+let mennyiEkezetesVanBenne = 0;
 
-    for(let i:number = 0; i<modositandoSzoveg.length; i++){
-        for(let j:number = 0; j<array.length; j++){
-            modositandoSzoveg[i] == array[j] ? num+=1 : null;  
-        }
-        console.log(num);
+for(let i:number=0; i<modositandoSzoveg.length;i++){
+    for(let j:number=0; j<ekezetesBetuk.length;j++){
+        modositandoSzoveg[i] == ekezetesBetuk[j] ? mennyiEkezetesVanBenne+=1 : null;
     }
-    return num;
-
 }
-EkezetesBetukSzama("Héhéháhá");
-
-// 2.feladat
-
-function camelCaseGenerator(modositandoSzoveg:string):string{
-    let space:string = " ";
-    let eredmeny:string = modositandoSzoveg[0].toUpperCase();
-    for(let i:number=1; i<modositandoSzoveg.length;i++){
-        if(modositandoSzoveg[i] == space){
-            eredmeny += modositandoSzoveg[i+1].toUpperCase();
-            i++; 
-        }
-        else{
-            eredmeny += modositandoSzoveg[i];
-        }
-        
-    }
-    console.log(eredmeny);
-    return eredmeny;
+console.log(mennyiEkezetesVanBenne);
+return mennyiEkezetesVanBenne;
 }
-camelCaseGenerator("Szeretem a programozást.")
-
+EkezetesBetukSzama("Hálás vagyok azért, hogy tudok tanulni.")
