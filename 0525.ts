@@ -31,7 +31,7 @@ for(let i:number=1; i<modositandoSzoveg.length;i++){
 console.log(ujSzoveg);
 return ujSzoveg;
 }
-camelCaseGenerator("Álmos vagyok és szeretnék izélni.");
+camelCaseGenerator("Szeretem a programozást és a kakaót is.");
 
 // 3. Feladat Kiratni a prímszámokat a vizsgált tömbben. Ha nincs, akkor írja ki, hogy nincs prímszám a tömbben
 
@@ -47,6 +47,10 @@ function PrimLista(vizsgaltTomb:number[]):number[]{
             igazHamis = false;
             i++;
         }
+        else if(vizsgaltTomb[i]%5==0){
+            igazHamis = false;
+            i++;
+        }
         else{
             igazHamis = true;
             primSzamok.push(vizsgaltTomb[i]);
@@ -56,3 +60,6 @@ function PrimLista(vizsgaltTomb:number[]):number[]{
     return primSzamok;
 }
 PrimLista([2,7,3,13,4,6,11,17,15]);
+
+// Unit tesztek
+// 1. feladat - 1. teszt : 
