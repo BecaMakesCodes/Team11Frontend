@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // Practice functions
+        function greet(name){
+            console.log(`Hello ${name}`);
+            if(!name){
+                console.log("Hi there!")
+            }
+        }
+        greet();
+
+        
+        // C and F converter teljes
+
+        // Celsiusba konvertálás function
+        function convertToCelsius(fahrenheit){
+            return (fahrenheit-32)*5/9;
+        };
+        // Fahrenheitba konvertálás function
+        function convertToFahrenheit(celsius){
+            return (celsius*9/5)-32;
+        }
+        // Hőmérséklet (number) és hőmérséklet-egység(string) inputból átkonvertálja egyik hőmérsékletet a másikba
+        function convertTemperature(degrees, unit){
+            if(typeof degrees !== 'number'){
+                return 'Invalid input. Please put in a number.'
+            };
+
+            if(unit !== 'C' && unit!== 'F'){
+                return 'Invalid unit. Please type in C or F.'
+            }
+
+            if(unit === 'C'){
+                const fahrenheitTemperature = Math.round(convertToFahrenheit(degrees));
+                return `${fahrenheitTemperature}F`;
+            }
+            else if(unit === 'F'){
+                const celsiusTemperature = Math.round(convertToCelsius(degrees));
+                return `${celsiusTemperature}C`;
+            }
+        }
+        console.log(convertTemperature(85,'F'));
+        
+        
+       
+    </script>
+</body>
+</html>

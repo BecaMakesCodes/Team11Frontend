@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+</head>
+<body>
+
+    <p>Todo List</p>
+    <input id="input" placeholder="Todo name" type="text"> 
+    <span><button id="btn" type="button">Add</button></span>
+    <div class="list"></div>
+<script>
+
+const add = document.querySelector("#btn");
+let array = [];
+add.addEventListener("click", function(){
+const input = document.querySelector("#input").value;
+array.push(input);
+document.querySelector(".list").innerHTML = array;
+});
+</script>   
+</body>
+</html>

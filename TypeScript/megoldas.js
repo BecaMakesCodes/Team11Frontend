@@ -1,3 +1,4 @@
+"use strict";
 /*// Implicit konverzió - A gép fordítja le magától
 var progNyelv = "Javascript";
 
@@ -56,6 +57,7 @@ function NegyzetKer(aOldal:number):void{
 function NegyzetTerulet(aOldal:number):number{  // A második :number a return értékének a típusát határozza meg
     return aOldal*4;
 }*/
+Object.defineProperty(exports, "__esModule", { value: true });
 /*function GenerateArray():void{
     var tomb:any = [];
     for(let i=0; i<10; i++){
@@ -96,56 +98,79 @@ function GiveBackStringOnGrade(grade:number){
 }
 GiveBackStringOnGrade(3);
 */
-function DiakInfo(nev, csoport, tipus) {
-    if (tipus == true) {
+/*
+function DiakInfo(nev:string, csoport:number, tipus:boolean){
+    if(tipus==true){
         console.log(nev + " " + "[Team" + csoport + "]" + " - " + "Junior Frontend");
     }
-    else {
+    else{
         console.log(nev + " " + "[Team" + csoport + "]" + " - " + "Webfejlesztő");
     }
+    
 }
-DiakInfo("Perle Rebeka", 11, true);
-function SzovegesErtekeles(jegy) {
-    var szorgalom;
-    var magatartas;
-    if (jegy == 5) {
-        szorgalom = "Példás";
-        magatartas = "Példás";
+DiakInfo("Perle Rebeka",11,true);
+
+function SzovegesErtekeles(jegy:number){
+    let szorgalom;
+    let magatartas;
+
+    if(jegy==5){
+        szorgalom = "Példás"
+        magatartas = "Példás"
     }
-    else if (jegy == 4) {
-        szorgalom = "Jó";
-        magatartas = "Jó";
+    else if(jegy==4){
+        szorgalom = "Jó"
+        magatartas = "Jó"
     }
-    else if (jegy == 3) {
-        szorgalom = "Változó";
-        magatartas = "Változó";
+    else if(jegy==3){
+        szorgalom = "Változó"
+        magatartas = "Változó"
     }
-    else if (jegy == 2) {
-        szorgalom = "Hanyag";
-        magatartas = "Rossz";
+    else if(jegy==2){
+        szorgalom = "Hanyag"
+        magatartas = "Rossz"
     }
     console.log(szorgalom, magatartas);
 }
 SzovegesErtekeles(2);
-function HarommalOszthatokSzama(tomb) {
-    var divByThree = [];
-    for (var i = 0; i < tomb.length; i++) {
-        if (tomb[i] % 3 == 0) {
-            divByThree.push(tomb[i]);
-        }
+
+function HarommalOszthatokSzama(tomb:any){
+    let divByThree:any = [];
+for(let i=0; i<tomb.length;i++){
+    if(tomb[i]%3==0){
+        divByThree.push(tomb[i]);
     }
-    console.log(divByThree.length);
+    
+    
 }
-HarommalOszthatokSzama([10, 12, 18, 30]);
-function Nyeroszamok(mennyiseg, alsoHatar, felsohatar) {
-    for (var i = 0; i < mennyiseg; i++) {
-        var random = Math.round(Math.random() * 100);
-        if (random < felsohatar && random > alsoHatar) {
-            console.log(random);
-        }
-        else {
-            i--;
-        }
+console.log(divByThree.length);
+}
+HarommalOszthatokSzama([10,12,18,30]);
+
+
+function Nyeroszamok(mennyiseg:number, alsoHatar:number, felsohatar:number){
+for(let i=0;i<mennyiseg;i++){
+    let random:number = Math.round(Math.random()*100);
+    if(random<felsohatar && random>alsoHatar){
+        console.log(random);
+    }
+    else{
+        i--;
     }
 }
-Nyeroszamok(10, 1, 90);
+}
+Nyeroszamok(10,1,90);
+*/
+// Hibás kód elemzés
+var arrayOfNums = [2, 4, 8, 17, 9, 23, 6, 42, 120, 2];
+function Max(array) {
+    var num = 0;
+    for (var i = 1; i < array.length; i++) {
+        num = array[0]; // Mivel a for cikluson belül adtam meg az értéket, így minden alkalommal a 0. indexen lévő értéket fogja felvenni
+        num < array[i] ? num = array[i] : i++; // Nem kell növelnem az i értékét 1-el, csak hagyni hogy fusson tovább a for ciklus
+    }
+    console.log(array.indexOf(num));
+    console.log(num);
+    return [num, array.indexOf(num)];
+}
+Max(arrayOfNums);

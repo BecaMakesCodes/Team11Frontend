@@ -97,7 +97,7 @@ function GiveBackStringOnGrade(grade:number){
 }
 GiveBackStringOnGrade(3);
 */
-
+/*
 function DiakInfo(nev:string, csoport:number, tipus:boolean){
     if(tipus==true){
         console.log(nev + " " + "[Team" + csoport + "]" + " - " + "Junior Frontend");
@@ -159,3 +159,19 @@ for(let i=0;i<mennyiseg;i++){
 }
 }
 Nyeroszamok(10,1,90);
+*/
+
+const numbers:number[] = [2,12,3,6,7,18,9,5]
+
+function Max(array:number[]):[number, number]{
+    let num:number = array[0];
+    for(let i:number = 1; i<array.length; i++){
+        num < array[i] ? num = array[i] : null;
+    }
+    console.log(array.indexOf(num));
+    console.log(num);
+    return [num, array.indexOf(num)]
+}
+Max(numbers);
+export{} // Kell, hogy ne dobjon errort. A HTML fájlban mielőtt scripteljük a JS-t, kell ez is: 
+// <script>var exports = {};</script>

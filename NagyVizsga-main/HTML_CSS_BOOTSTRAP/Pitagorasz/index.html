@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitagorasz-tételt</title>
+    <style>
+        body {
+            background-color: orange;
+            width: 100%;
+        }
+
+        .main {
+            background-color: cornsilk;
+            width: 960px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        h2 {
+            border-top: 1px solid orange;
+            border-bottom: 1px solid orange;
+            width: 50%;
+        }
+
+        img {
+            width: 200px;
+            float: right;
+            position: relative;
+            bottom: 60px;
+           
+        }
+
+        section{
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            width: 75%;
+            
+        }
+
+        p {
+            text-align: justify;
+            text-indent: 20px;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>A Pitagorasz-tétel és bizonyítása</h1>
+        <h2>A derékszögű háromszög</h2>
+        <p>
+            Ha egy háromszögről azt mondjuk, hogy derékszögű, akkor ezzel egy adatát megadtuk. A háromszög
+            meghatározásához ezenkívül már csak két további adatra van szükségünk.
+            A derékszögű háromszög oldalai között az általános háromszögre vonatkozó már említett tulajdonságon túl még
+            szorosabb kapcsolat van. A közöttük levő összefüggést Pitagorasz tételnek nevezzük. A korábbi években már
+            megismertük ezt a tételt.
+        </p>
+        <h2>Pitagorasz tétel</h2>
+        <img src="abra1.jpg" alt="">
+        <section>
+            <p>Derékszögű háromszögben a két befogó négyzetének összege egyenlő az átfogó négyzetével. (A
+                befogó négyzetén,
+                az átfogó négyzetén a megfelelő szakaszhosszak négyzetét értjük.)</p>
+        </section>
+        <h2>A Pitagorasz-tétel bizonyítása</h2>
+        <section>
+            <p> A Pitagorasz-tételnek egyik egyszerű bizonyítási módja az, amelynek alapgondolata: egyenlő területekből
+                azonos nagyságú területeket elvévé, a maradék területek is egyenlő nagyságúak.</p>
+        </section>
+        <img src="abra2.jpg" alt="">
+        <section>
+            <ul>
+                <li>
+                    Vegyünk két négyzetet, mindkettő oldalhossza legyen a + b. Ezeket bontsuk részekre az ábrán látható
+                    módon.
+                    A felső négyzetet gondolatban feldaraboltuk négy darab olyan derékszögű háromszögre, amelynekbefogói a
+                    és b.
+                </li>
+                <li>
+                    Ezek azonos méretűek. Az átfogójuk is azonos hosszúságú, jelöljük c-vel. Ezenkívül két négyzetet
+                    kaptunk, az
+                    egyik a2, a másik b2 területű.
+                </li>
+                <li>
+                    Az előző "nagy" négyzettel azonos területű alsó négyzetet öt részre daraboltuk. Ebből négy olyan
+                    derékszögű
+                    háromszög, amilyent az előző felbontásnál kaptunk. Befogóik a és b, átfogújuk c.
+                    Ha mindkét "nagy" négyzetből elvesszük a minden méterében azonos (csak más helyzetű) négy-négy
+                    derékszögű
+                    háromszöget, akkor a maradék területeknek is egyenlőnek kell lenniük.
+                </li>
+                <li>A felső "nagy" négyzetből két "kis" négyzet marad, ezek együttes területe a2 + b2.</li>
+                <li>
+                    Az alsó "nagy" négyzetből marad a középső négyszög. Ennek minden oldala c. Minden szöge 90°, mert
+                    (például)
+                    az AB oldal P pontjánál lévő nagyságát megkapjuk, ha az egyenesszögből elvesszük a derékszögű háromszög
+                    két
+                    hegyesszögének összegét, azaz 90°-ot. Mivel a négyszög minden oldala egyenlő és minden szöge 90°, a
+                    maradék
+                    négyszög is négyzet. Területe c2.
+                </li>
+    
+                <li> A kétféle módon kapott maradékterületek egyenlő nagyságúak. Ezért a<sup>2</sup> + b<sup>2</sup> =
+                    c<sup>2</sup>.</li>
+        </section>
+            <img src="abra3.jpg" alt="">
+        </ul>
+
+    </div>
+
+</body>
+
+</html>

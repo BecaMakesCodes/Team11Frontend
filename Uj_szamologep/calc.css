@@ -1,0 +1,141 @@
+:root {
+    /* Light mode colors */
+
+    /* Pre-defining colors */
+    --clr-primary: #A1CCD1;
+    --clr-secondary: #F6F4EB;
+    --clr-accent: #d7f1ed;
+    --clr-accent-two: #fff;
+
+    /* Dark mode colors */
+    --clr-dm-primary: #0E5058;
+    --clr-dm-secondary: #126868;
+    --clr-dm-accent: #1B9899;
+
+    /* Define font family */
+    --ff-primary: 'Inter', sans-serif;
+
+    /* Define font weights */
+    --fw-regular: 400;
+    --fw-semi: 600;
+    --fw-bold: 700;
+
+    /* Define font size */
+    --fs-buttons: 25px;
+    --fs-inputs: 30px;
+    --fs-outputs: 46px;
+
+}
+
+html,
+body {
+    height: 100%;
+    font-size: 20px;
+    background-color: var(--clr-accent);
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+@media(max-width:600px){
+    .container{
+        width: 100%;
+        background-color: var(--clr-primary);
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Dark / Light mode toggle */
+
+    .container_toggle{
+        background-color: var(--clr-secondary);
+        width: 40%;
+        max-width: 9rem;
+        margin: 2rem auto;
+        padding: 0.4rem 0.8rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-radius: 1.5rem;
+    }
+    .toggle{
+        background-color: var(--clr-secondary);
+        border: none;
+    }
+    
+    .path{
+        color: #A1CCD1;
+    }
+
+    /* Input and output screen */
+
+    .container_screen{
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        margin: 2rem 1rem;
+    }
+    .screen{
+        background-color: var(--clr-primary);
+        font-family: var(--ff-primary);
+        border: none;
+        text-align: right;
+        color: var(--clr-accent-two);  
+    }
+    .screen__input{
+        font-weight: var(--fw-regular);
+        font-size: var(--fs-inputs);
+    }
+    .screen__output{
+        font-weight: var(--fw-semi);
+        font-size: var(--fs-outputs);
+    }
+
+    /* Button section */
+
+    .container_button{
+        width: 100%;
+        padding: 1rem 0.5rem;
+        margin-top: 0.5rem;
+        background-color: var(--clr-accent);
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;
+        gap: 0.7rem;
+    }
+    .container_button button{
+        background-color: var(--clr-secondary);
+        border: none;
+        border-radius: 1rem;
+        width: 4rem;
+        height: 4rem;
+        padding: 1rem;
+        margin: 0.2rem;
+        font-family: var(--ff-primary);
+        font-size: var(--fs-buttons);
+        font-weight: var(--fw-semi);
+        color: var(--clr-primary);
+    }
+    
+}
+@media (max-width: 390px){
+    .container_button button{
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 1rem;
+    }
+    .container_toggle{
+        margin: 1rem auto;
+        
+    }
+}

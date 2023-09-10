@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Vizsga feladat teszt</title>
+</head>
+
+<body>
+    <table id="testTable" class="table table-sm table-striped table-dark table-hover">
+        <thead>
+            <tr>
+                <td>Teszt neve</td>
+                <td>Input adat</td>
+                <td>Elvárt eredmény</td>
+                <td>Végeredmény</td>
+                <td>Sikeresség</td>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+        //Ide illessze be a JavasScript kódot a teszteléshez
+
+        // 1. Feladat - Téglalap kerület
+
+        function TeglalapKerulet(aOldal, bOldal) {
+            let terulet = 2 * (aOldal + bOldal);
+            console.log(terulet);
+            return terulet;
+        }
+        TeglalapKerulet(2, 5);
+
+        // 2. Feladat
+
+        function VizHalmazallapot(fok) {
+            let szoveg = "folyekony";
+            fok < 0 ? szoveg = "szilard" : null;
+            fok > 100 ? szoveg = "legnemu" : null;
+            return szoveg;
+        }
+        VizHalmazallapot(50);
+
+        // 3.feladat
+
+        const europaiUnio = [{
+            orszag: "Ausztria",
+            csatlakozas: "1995.01.01"
+        },
+        {
+            orszag: "Belgium",
+            csatlakozas: "1958.01.01"
+        },
+        {
+            orszag: "Bulgária",
+            csatlakozas: "2007.01.01"
+        },
+        {
+            orszag: "Ciprus",
+            csatlakozas: "2004.05.01"
+        },
+        {
+            orszag: "Csehország",
+            csatlakozas: "2004.05.01"
+        },
+        {
+            orszag: "Dánia",
+            csatlakozas: "1973.01.01"
+        },
+        {
+            orszag: "Észtország",
+            csatlakozas: "2004.05.01"
+        },
+        {
+            orszag: "Finnország",
+            csatlakozas: "1995.01.01"
+        },
+        {
+            orszag: "Franciaország",
+            csatlakozas: "1958.01.01"
+        },
+        {
+            orszag: "Görögország",
+            csatlakozas: "1981.01.01"
+        },
+        {
+            orszag: "Hollandia",
+            csatlakozas: "1958.01.01"
+        },
+        {
+            orszag: "Horvátország",
+            csatlakozas: "2013.07.01"
+        },
+        {
+            orszag: "Írország",
+            csatlakozas: "1973.01.01"
+        },
+        {
+            orszag: "Lengyelország",
+            csatlakozas: "2004.05.01"
+        },
+        {
+            orszag: "Lettország",
+            csatlakozas: "2004.05.01"
+        },
+        {
+            orszag: "Litvánia",
+            csatlakozas: "2004.05.01"
+        },
+        {
+            orszag: "Luxemburg",
+            csatlakozas: "1958.01.01"
+        },
+        {
+            orszag: "Magyarország",
+            csatlakozas: "2004.05.01"
+        },
+        {
+            orszag: "Málta",
+            csatlakozas: "2004.05.01"
+        },
+        {
+            orszag: "Németország",
+            csatlakozas: "1958.01.01"
+        },
+        {
+            orszag: "Olaszország",
+            csatlakozas: "1958.01.01"
+        },
+        {
+            orszag: "Portugália",
+            csatlakozas: "1986.01.01"
+        },
+        {
+            orszag: "Románia",
+            csatlakozas: "2007.01.01"
+        },
+        {
+            orszag: "Spanyolország",
+            csatlakozas: "1986.01.01"
+        },
+        {
+            orszag: "Svédország",
+            csatlakozas: "1995.01.01"
+        },
+        {
+            orszag: "Szlovákia",
+            csatlakozas: "2004.05.01"
+        },
+        {
+            orszag: "Szlovénia",
+            csatlakozas: "2004.05.01"
+        }
+        ];
+
+        function Csatlakozott2004(vizsgaltObjektum){
+            let szamlalo = 0;
+            for(let i = 0; i<vizsgaltObjektum.length; i++){
+                (vizsgaltObjektum[i].csatlakozas).includes("2004") ? szamlalo+=1 : null
+            }
+            console.log(szamlalo);
+            return szamlalo;
+        }
+        Csatlakozott2004(europaiUnio);
+
+
+
+    </script>
+    <script src="jsteszt.js"></script>
+</body>
+
+</html>

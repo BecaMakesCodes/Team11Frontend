@@ -1,0 +1,32 @@
+<h1>Kéktúra feladat</h1>
+<form class="form-group">
+    <label for="kiindulo">Kiindulópont neve</label>
+    <input class="form-control" type="text">
+    <label for="veg">Végpont neve</label>
+    <input class="form-control" type="text">
+    <label for="hossz">Szakasz hossza (km)</label>
+    <input class="form-control" type="text">
+    <label for="emelkedes">Emelkedés mértéke (m)</label>
+    <input class="form-control" type="text">
+    <label for="lejtes">Lejtés mértéke (m)</label>
+    <input class="form-control" type="text">
+    <label for="pecsetelohely">Pecsételőhely-e (i/n)</label>
+    <input class="form-control" type="text"> 
+</form>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Kiindulópont neve</th>
+            <th scope="col">Végpont neve</th>
+            <th scope="col">Túraszakasz hossza</th>
+            <th scope="col">Emelkedés</th>
+            <th scope="col">Lejtés</th>
+            <th scope="col">Pecsételőhely-e</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+<button class="btn btn-dark" type="button">Adatok feltöltése</button>
+<br>
+<button class="btn btn-danger mt-5" type="button" [routerLink]="['hosegriado']"> Hőségriadó feladat</button>
+<button class="btn btn-info mt-5 ms-3" type="button" [routerLink]="['kektura']">Kéktúra feladat</button>

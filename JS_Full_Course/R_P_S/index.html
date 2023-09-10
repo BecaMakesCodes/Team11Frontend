@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <style>
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            background-color: hsl(265, 98%, 67%);
+            width: 35%;
+            margin: 0 auto;
+            text-align: center;
+            border-radius: 1rem;
+            padding: 1rem;
+            position: relative;
+            top: 2rem;
+        }
+
+        .scale_down {
+            width: 75%;
+        }
+
+        .rounded {
+            border-radius: 50%;
+            height: 5rem;
+            width: 5rem;
+            overflow: hidden;
+            cursor: pointer;
+            margin-bottom: 1rem;
+        }
+        .score_container{
+            padding: 1rem;
+        }
+        #resetbtn{
+            background-color: white;
+            border: 0;
+            border-radius: 1rem;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            color: hsl(272, 61%, 34%);
+            font-weight: bold;
+        }
+        @media(max-width: 450px){
+            
+            .container{
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Rock Paper Scissors</h1>
+        <button type="button" id="rockbtn" class="btn rounded" value='rock'>
+        <img src="/JS_Full_Course/icons8-pet-rock-48.png" alt="">
+        </button>
+        <button type="button" id="paperbtn" class="btn rounded" value='paper'>
+        <img class="scale_down" src="/JS_Full_Course/icons8-matt-paper-64.png" alt="">
+        </button>
+        <button type="button" id="scissorsbtn" class="btn rounded" value='scissors'>
+        <img class="scale_down" src="/JS_Full_Course/icons8-cutting-64.png" alt="">
+        </button>
+        <div class="result_text">
+
+        </div>
+        <div class="result_icon">
+
+        </div>
+        <div class="score_container">
+            <span class="win">Wins:</span>
+            <span class="lose">Losses:</span>
+            <span class="tie">Ties:</span>
+        </div>
+        <div>
+            <button type="button" id="resetbtn" class="btn">Reset score</button>
+        </div>
+    </div>
+
+    <script>
+
+        const score = {
+            won: 0,
+            lost: 0,
+            tie: 0
+        };
+
+
+        const arrayOfChoices = ['rock', 'paper', 'scissors'];
+
+        function GenerateChoice() {
+            let random = Math.floor(Math.random() * arrayOfChoices.length);
+            let choice = arrayOfChoices[random];
+            return choice;
+        }
+
+        const buttonValue = document.querySelectorAll(".btn");
+
+
+        buttonValue.forEach(item => {
+            item.addEventListener("click", function () {
+                let userChoice = item.value;
+                let compChoice = GenerateChoice();
+                CompareChoice(userChoice, compChoice);
+            });
+        });
+
+        function CompareChoice(userChoice, compChoice) {
+            if (userChoice === compChoice) {
+                document.querySelector(".result_text").innerHTML = "It's a tie.";
+                document.querySelector(".result_icon").innerHTML = `You: ${userChoice} Computer: ${compChoice}`;
+                document.querySelector(".tie").innerHTML = `Ties: ${score.tie += 1}`;
+            }
+
+            else if (userChoice === 'rock' && compChoice === 'paper') {
+                document.querySelector(".result_text").innerHTML = "You lose.";
+                document.querySelector(".result_icon").innerHTML = `You: ${userChoice}  Computer: ${compChoice}`;
+                document.querySelector(".lose").innerHTML = `Losses: ${score.lost += 1}`;
+            }
+
+            else if (userChoice === 'rock' && compChoice === 'scissors') {
+                document.querySelector(".result_text").innerHTML = "You win.";
+                document.querySelector(".result_icon").innerHTML = `You: ${userChoice}  Computer: ${compChoice}`;
+                document.querySelector(".win").innerHTML = `Wins: ${score.won += 1}`;
+            }
+
+            else if (userChoice === 'paper' && compChoice === 'rock') {
+                document.querySelector(".result_text").innerHTML = "You win.";
+                document.querySelector(".result_icon").innerHTML = `You: ${userChoice}  Computer: ${compChoice}`;
+                document.querySelector(".win").innerHTML = `Wins: ${score.won += 1}`;
+            }
+
+            else if (userChoice === 'paper' && compChoice === 'scissors') {
+                document.querySelector(".result_text").innerHTML = "You lose.";
+                document.querySelector(".result_icon").innerHTML = `You: ${userChoice}  Computer: ${compChoice}`;
+                document.querySelector(".lose").innerHTML = `Losses: ${score.lost += 1}`;
+            }
+
+            else if (userChoice === 'scissors' && compChoice === 'rock') {
+                document.querySelector(".result_text").innerHTML = "You lose.";
+                document.querySelector(".result_icon").innerHTML = `You: ${userChoice}  Computer: ${compChoice}`;
+                document.querySelector(".lose").innerHTML = `Losses: ${score.lost += 1}`;
+            }
+
+            else if (userChoice === 'scissors' && compChoice === 'paper') {
+                document.querySelector(".result_text").innerHTML = "You win.";
+                document.querySelector(".result_icon").innerHTML = `You: ${userChoice}  Computer: ${compChoice}`;
+                document.querySelector(".win").innerHTML = `Wins: ${score.won += 1}`;
+            }
+        }
+
+        const reset = document.querySelector("#resetbtn");
+
+        function resetScore() {
+            score.lost = 0;
+            score.won = 0;
+            score.tie = 0;
+            document.querySelector(".lose").innerHTML = 'Losses: ';
+            document.querySelector(".win").innerHTML = 'Wins: ';
+            document.querySelector(".tie").innerHTML = 'Ties: ';
+        }
+        reset.addEventListener('click', resetScore);
+
+    </script>
+</body>
+
+</html>
